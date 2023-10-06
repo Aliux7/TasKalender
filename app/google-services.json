@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "890725799189",
+    "project_id": "taskalender-db532",
+    "storage_bucket": "taskalender-db532.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890725799189:android:43de6eeeb7be196c99451c",
+        "android_client_info": {
+          "package_name": "com.twothreeone.taskalender"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCInH_WQYmQhszGHzx4yhjdKBDuGWznd80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
