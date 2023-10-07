@@ -9,4 +9,16 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="started_title">Hello!</string>
+    <string name="started_sub_title">
+        Nice to meet you, come join our community
+        <br><b>Login</b> if you already have an account.</br>
+        <br><b>Register</b> to get started with the app.</br>
+    </string>
+
+    <string name="illustration_img">
+        a img
+    </string>
+    <string name="btn_register">Register</string>
+    <string name="btn_login">LOGIN</string>
 </resources>
