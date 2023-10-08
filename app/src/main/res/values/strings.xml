@@ -21,4 +21,6 @@
     </string>
     <string name="btn_register">Register</string>
     <string name="btn_login">LOGIN</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
 </resources>
