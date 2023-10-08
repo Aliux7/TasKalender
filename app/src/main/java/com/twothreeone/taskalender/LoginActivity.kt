@@ -4,14 +4,18 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
@@ -24,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var googleSignInClient:GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +43,8 @@ class LoginActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         auth = Firebase.auth
+//        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
+//            .requestIdToken(getString(R.string.default_web_client_id))
 
         binding.loginButton.setOnClickListener(View.OnClickListener {
 
@@ -52,10 +59,22 @@ class LoginActivity : AppCompatActivity() {
                         finish()
                     }else{
                         Log.e("Error: ", it.exception.toString())
+                        Toast.makeText(this, "Account not found", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
         })
+
+        binding.registerLink.setOnClickListener(View.OnClickListener {
+
+            val loginFormContainer: CardView = findViewById(R.id.loginForm)
+            loginFormContainer.alpha = 0f
+            val i = Intent(this, RegisterActivity::class.java)
+            startActivity(i)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            finish()
+        })
+
 
     }
 
