@@ -1,5 +1,6 @@
 package com.twothreeone.taskalender
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import com.google.android.material.snackbar.Snackbar
@@ -30,31 +31,35 @@ class MainActivity : AppCompatActivity() {
         val window = window
         window.statusBarColor = ContextCompat.getColor(this, R.color.background_color)
 
-//        setSupportActionBar(binding.toolbar)
-
-//        val navController = findNavController(R.id.nav_host_fragment_content_main)
-//        appBarConfiguration = AppBarConfiguration(navController.graph)
-//        setupActionBarWithNavController(navController, appBarConfiguration)
-
-//        binding.fab.setOnClickListener { view ->
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                    .setAction("Action", null).show()
-//        }
-
-        val user: Map<String, Any> = hashMapOf(
-            "name" to "John Doe",
-            "email" to "johndoe@example.com"
-        )
-
-        db.collection("users")
-            .add(user)
-            .addOnSuccessListener { documentReference: DocumentReference ->
-                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+        binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.bottom_cash -> {
+                    // Handle the "bottom_cash" item selection here
+                    true
+                }
+                R.id.bottom_task -> {
+                    // Handle the "bottom_cash" item selection here
+                    true
+                }
+                R.id.bottom_home -> {
+                    // Handle the "bottom_cash" item selection here
+                    true
+                }
+                R.id.bottom_note -> {
+                    // Handle the "bottom_cash" item selection here
+                    true
+                }
+                R.id.bottom_profile -> {
+                    val i = Intent(this, ProfileActivity::class.java)
+                    startActivity(i)
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                    finish()
+                    true
+                }
+                else -> false
             }
-            .addOnFailureListener { e ->
-                Log.w(TAG, "Error adding document", e)
-            }
+        }
+
 
     }
-
 }
