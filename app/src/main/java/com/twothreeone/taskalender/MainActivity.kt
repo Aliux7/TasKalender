@@ -15,6 +15,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.twothreeone.taskalender.databinding.ActivityMainBinding
@@ -42,6 +43,34 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         changeFragment(HomeFragment());
+
+        binding.bottomNavigation.show(0)
+        binding.bottomNavigation.add(MeowBottomNavigation.Model(0, R.drawable.baseline_home_24))
+        binding.bottomNavigation.add(MeowBottomNavigation.Model(1, R.drawable.baseline_cash_24))
+        binding.bottomNavigation.add(MeowBottomNavigation.Model(2, R.drawable.baseline_task_alt_24))
+        binding.bottomNavigation.add(MeowBottomNavigation.Model(3, R.drawable.baseline_note_24))
+        binding.bottomNavigation.add(MeowBottomNavigation.Model(4, R.drawable.baseline_profile_24))
+
+        binding.bottomNavigation.setOnClickMenuListener {
+            when(it.id){
+                0 -> {
+                    changeFragment(HomeFragment());
+                }
+                1 -> {
+                    changeFragment(CashFlowFragment());
+                }
+                2 -> {
+                    changeFragment(TodoListFragment());
+                }
+                3 -> {
+                    changeFragment(NotesFragment());
+                }
+                4 -> {
+                    changeFragment(ProfileFragment());
+                }
+            }
+        }
+
 //        binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
 //            when (menuItem.itemId) {
 //                R.id.bottom_home -> {

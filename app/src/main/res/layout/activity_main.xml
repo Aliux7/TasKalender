@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/background_color"
+    android:background="@color/secondary_color"
     >
 
     <FrameLayout
@@ -16,22 +16,21 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="334dp" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/frame_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_menu"
-        android:background="@color/secondary_color"
-        app:itemIconTint="@color/accent_color"
-        app:itemTextColor="@color/accent_color"
-        app:itemIconSize="30dp"/>
-
-
-
-
+        app:mbn_circleColor="@color/background_color"
+        app:mbn_backgroundBottomColor="@color/background_color"
+        app:mbn_countBackgroundColor="#ff6f00"
+        app:mbn_countTextColor="#ffffff"
+        app:mbn_defaultIconColor="#90a4ae"
+        app:mbn_rippleColor="#2f424242"
+        app:mbn_selectedIconColor="@color/accent_color"
+        app:mbn_shadowColor="#1f212121" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
