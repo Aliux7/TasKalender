@@ -12,6 +12,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.twothreeone.taskalender.databinding.ActivityMainBinding
@@ -22,6 +25,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val TAG = "MainActivity"
     val db = FirebaseFirestore.getInstance()
+    private val ID_HOME = 1
+    private val ID_CASH_FLOW = 2
+    private val ID_TODO_LIST = 3
+    private val ID_NOTES = 4
+    private val ID_PROFILE = 5
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -30,36 +38,53 @@ class MainActivity : AppCompatActivity() {
 
         val window = window
         window.statusBarColor = ContextCompat.getColor(this, R.color.background_color)
+        window.navigationBarColor = ContextCompat.getColor(this, R.color.background_color)
+        supportActionBar?.hide()
 
-        binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.bottom_cash -> {
-                    // Handle the "bottom_cash" item selection here
-                    true
-                }
-                R.id.bottom_task -> {
-                    // Handle the "bottom_cash" item selection here
-                    true
-                }
-                R.id.bottom_home -> {
-                    // Handle the "bottom_cash" item selection here
-                    true
-                }
-                R.id.bottom_note -> {
-                    // Handle the "bottom_cash" item selection here
-                    true
-                }
-                R.id.bottom_profile -> {
-                    val i = Intent(this, ProfileActivity::class.java)
-                    startActivity(i)
-                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-                    finish()
-                    true
-                }
-                else -> false
-            }
-        }
+        changeFragment(HomeFragment());
+//        binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
+//            when (menuItem.itemId) {
+//                R.id.bottom_home -> {
+////                    val i = Intent(this, MainActivity::class.java)
+////                    startActivity(i)
+////                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+////                    finish()
+//
+//                    changeFragment(HomeFragment());
+//                    true
+//                }
+//                R.id.bottom_cash -> {
+//                    // Handle the "bottom_cash" item selection here
+//                    changeFragment(CashFlowFragment());
+//                    true
+//                }
+//                R.id.bottom_task -> {
+//                    // Handle the "bottom_cash" item selection here
+//                    changeFragment(TodoListFragment());
+//                    true
+//                }
+//                R.id.bottom_note -> {
+//                    // Handle the "bottom_cash" item selection here
+//                    changeFragment(NotesFragment());
+//                    true
+//                }
+//                R.id.bottom_profile -> {
+////                    val i = Intent(this, ProfileActivity::class.java)
+////                    startActivity(i)
+////                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+////                    finish()
+//                    changeFragment(ProfileFragment());
+//                    true
+//                }
+//                else -> false
+//            }
+//        }
+    }
 
-
+    private fun changeFragment(fragment: Fragment) {
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_container, fragment)
+        fragmentTransaction.commit()
     }
 }

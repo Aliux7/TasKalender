@@ -147,6 +147,7 @@
                 android:layout_marginTop="20dp"
                 app:prefixText="+62"
                 android:textSize="15dp"
+
                 app:prefixTextColor="@color/text_color"
                 >
                 <com.google.android.material.textfield.TextInputEditText
