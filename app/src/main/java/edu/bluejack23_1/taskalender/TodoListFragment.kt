@@ -54,10 +54,9 @@ class TodoListFragment : Fragment() {
     private fun showAddTaskPopup(){
         val dialog = Dialog(requireContext())
         dialog.setContentView(R.layout.layout_add_task_dialog)
-//        dialog.setContentView(R.layout.)
 
         val taskEditText = dialog.findViewById<EditText>(R.id.addTaskTxt)
-        val submitTaskButton = dialog.findViewById<Button>(R.id.addTaskBtn)
+        val submitTaskButton = dialog.findViewById<Button>(R.id.submitTaskBtn)
 
         // Show the keyboard
         taskEditText.post {
