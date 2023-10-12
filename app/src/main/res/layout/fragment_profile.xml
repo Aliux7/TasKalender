@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment"
+    tools:context="edu.bluejack23_1.taskalender.ProfileFragment"
     android:gravity="center"
     android:background="@color/secondary_color">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ProfileActivity"
+        tools:context="edu.bluejack23_1.taskalender.ProfileActivity"
         android:background="@color/background_color">
 
         <androidx.constraintlayout.widget.ConstraintLayout

@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TodoListFragment"
+    tools:context="edu.bluejack23_1.taskalender.TodoListFragment"
     android:gravity="center"
     android:background="@color/secondary_color">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ProfileActivity"
+        tools:context="edu.bluejack23_1.taskalender.ProfileActivity"
         android:background="@color/background_color">
 
 
@@ -50,33 +50,44 @@
                 app:item_textSize="8sp" />
         </RelativeLayout>
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60sp"
-                android:id="@+id/taskContainer">
-
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Task Name"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_height="60sp"
+                    android:id="@+id/taskContainer">
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Task Name"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </LinearLayout>
+        <Button
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:text="Add"
+            android:id="@+id/addTaskBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="100sp"
+            android:layout_marginRight="20sp"
+            android:background="@drawable/primary_button"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

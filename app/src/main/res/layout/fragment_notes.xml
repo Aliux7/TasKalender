@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NotesFragment"
+    tools:context="edu.bluejack23_1.taskalender.NotesFragment"
     android:gravity="center"
     android:background="@color/secondary_color"
     android:padding="20dp">

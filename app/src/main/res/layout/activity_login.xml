@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".LoginActivity"
+    tools:context="edu.bluejack23_1.taskalender.LoginActivity"
     android:background="@color/secondary_color"
     android:padding="20dp">
 

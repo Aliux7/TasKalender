@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".RegisterActivity"
+    tools:context="edu.bluejack23_1.taskalender.RegisterActivity"
     android:background="@color/secondary_color"
     android:padding="20dp">
 

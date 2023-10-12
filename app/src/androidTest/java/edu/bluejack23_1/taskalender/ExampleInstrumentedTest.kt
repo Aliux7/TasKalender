@@ -1,4 +1,4 @@
-package com.twothreeone.taskalender
+package edu.bluejack23_1.taskalender
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
