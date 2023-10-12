@@ -1,18 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TodoListFragment"
     android:gravity="center"
-    android:background="@color/secondary_color"
-    android:padding="20dp">
+    android:background="@color/secondary_color">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Todo List Fragment"
-        android:gravity="center"
-        android:textColor="@color/text_color"/>
+        tools:context=".ProfileActivity"
+        android:background="@color/background_color">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Task"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:background="@color/background_color"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <com.darwindeveloper.horizontalscrollmenulibrary.custom_views.HorizontalScrollMenuView
+                android:id="@+id/taskMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:backgroundMenuColor="@color/background_color"
+                app:backgroundNotifications="@color/accent_color"
+                app:icon_height="0dp"
+                app:icon_width="0dp"
+                app:item_backgroundColor="@color/background_color"
+                app:item_colorSelected="@color/accent_color"
+                app:item_marginLeft="30sp"
+                app:item_marginRight="30sp"
+                app:item_textColor="#ffffff"
+                app:item_textSize="8sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:id="@+id/taskContainer">
+
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Task Name"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 </FrameLayout>
