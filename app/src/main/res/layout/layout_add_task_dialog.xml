@@ -14,7 +14,8 @@
             android:id="@+id/addTaskTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter a task" />
+            android:hint="New Task"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/submitTaskBtn"
