@@ -23,7 +23,7 @@ import com.darwindeveloper.horizontalscrollmenulibrary.custom_views.HorizontalSc
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.twothreeone.taskalender.R
-import com.twothreeone.taskalender.databinding.FragmentCashFlowBinding
+
 import com.twothreeone.taskalender.databinding.FragmentTodoListBinding
 
 
@@ -34,9 +34,7 @@ private var binding: FragmentTodoListBinding? = null
 class TodoListFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
-    private var binding: FragmentCashFlowBinding? = null
     private lateinit var recyclerView: RecyclerView
-
     private lateinit var horizontalScrollView: HorizontalScrollMenuView
     private lateinit var textView: TextView
     private lateinit var addTaskBtn: Button
@@ -75,7 +73,6 @@ class TodoListFragment : Fragment() {
         window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
 // Set the height of the dialog to wrap content
         params?.height = ViewGroup.LayoutParams.WRAP_CONTENT
-
         window?.attributes = params
         window?.attributes = params
 
@@ -165,7 +162,6 @@ class TodoListFragment : Fragment() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        // You can now access horizontalScrollView
         return rootView
     }
 
