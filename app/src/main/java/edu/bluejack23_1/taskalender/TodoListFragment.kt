@@ -16,19 +16,26 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.darwindeveloper.horizontalscrollmenulibrary.custom_views.HorizontalScrollMenuView
 import com.darwindeveloper.horizontalscrollmenulibrary.custom_views.HorizontalScrollMenuView.OnHSMenuClickListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.twothreeone.taskalender.R
+import com.twothreeone.taskalender.databinding.FragmentCashFlowBinding
+import com.twothreeone.taskalender.databinding.FragmentTodoListBinding
 
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+private var binding: FragmentTodoListBinding? = null
 
 class TodoListFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
+    private var binding: FragmentCashFlowBinding? = null
+    private lateinit var recyclerView: RecyclerView
 
     private lateinit var horizontalScrollView: HorizontalScrollMenuView
     private lateinit var textView: TextView
@@ -42,6 +49,7 @@ class TodoListFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
 
     private fun initMenu() {
@@ -141,6 +149,21 @@ class TodoListFragment : Fragment() {
                 showAddTaskPopup()
             }
         }
+
+        //make recycler view
+        val taskItems = listOf(
+            TaskItem("Make TaskKalendar", "2023-10-28"),
+            TaskItem("Make TaskKalendar", "2023-10-28"),
+            TaskItem("Make TaskKalendar", "2023-10-28"),
+            TaskItem("Make TaskKalendar", "2023-10-28"),
+            TaskItem("Make TaskKalendar", "2023-10-28"),
+            TaskItem("Make TaskKalendar", "2023-10-28")
+        )
+        recyclerView = rootView.findViewById(R.id.taskRecyclerView)
+        val adapter = TaskAdapter(taskItems)
+
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         // You can now access horizontalScrollView
         return rootView
