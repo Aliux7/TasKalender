@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "890725799189",
+    "project_id": "taskalender-db532",
+    "storage_bucket": "taskalender-db532.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890725799189:android:9308c1ac6fde98ef99451c",
+        "android_client_info": {
+          "package_name": "edu.bluejack23_1.taskalender"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890725799189-393r8c053dpmf5b5cikleli3lk62n5bm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCInH_WQYmQhszGHzx4yhjdKBDuGWznd80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890725799189-393r8c053dpmf5b5cikleli3lk62n5bm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

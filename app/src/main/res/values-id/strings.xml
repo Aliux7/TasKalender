@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TasKalender</string>
+    <string name="action_settings">Pengaturan</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Fragmen Pertama</string>
+    <string name="second_fragment_label">Fragmen Kedua</string>
+    <string name="next">Selanjutnya</string>
+    <string name="previous">Sebelumnya</string>
+
+    <string name="hello_first_fragment">Halo fragmen pertama</string>
+    <string name="hello_second_fragment">Halo fragmen kedua. Argumen: %1$s</string>
+    <string name="title_activity_login">Aktivitas Masuk</string>
+    <string name="title_activity_register">Aktivitas Pendaftaran</string>
+    <string name="title_activity_splash">Aktivitas Splash</string>
+    <!-- TODO: Hapus atau ubah teks gantung ini -->
+    <string name="hello_blank_fragment">Halo fragmen kosong</string>
+    <string name="title_tasks">Tugas</string>
+    <string name="title_activity_testing">Aktivitas Pengujian</string>
+    <string name="prompt_email">Surel</string>
+    <string name="prompt_password">Kata Sandi</string>
+    <string name="action_sign_in">Masuk atau mendaftar</string>
+    <string name="action_sign_in_short">Masuk</string>
+    <string name="welcome">Selamat datang !</string>
+    <string name="invalid_username">Bukan nama pengguna yang valid</string>
+    <string name="invalid_password">Kata sandi harus >5 karakter</string>
+    <string name="login_failed">Gagal masuk</string>
+    <string name="title_activity_phone">Aktivitas Ponsel</string>
+    <string name="title_activity_otp">Aktivitas OTP</string>
+
+    <string name="select_categories_label">Pilih Kategori</string>
+    <string name="title_activity_edit_profile">Edit Profil</string>
+    <string name="task_title">Tugas</string>
+    <string name="loginTitle">Masuk</string>
+    <string name="emailHint">Surel</string>
+    <string name="passwordHint">Kata Sandi</string>
+    <string name="loginBtn">Masuk</string>
+    <string name="login_with_phone_btn">Masuk dengan Ponsel</string>
+    <string name="new_here_txt">Baru di sini?</string>
+    <string name="register_link">Daftar</string>
+    <string name="register_title">Daftar</string>
+    <string name="date_of_birth_lbl">Tanggal Lahir</string>
+    <string name="register_btn">Daftar</string>
+    <string name="joined_us_before_lbl">Sudah bergabung sebelumnya?</string>
+    <string name="login_link">Masuk</string>
+    <string name="email_hint">Surel</string>
+    <string name="usernameHint">Nama Pengguna</string>
+    <string name="phoneHint">Nomor Ponsel</string>
+    <string name="confirm_passwordHint">Konfirmasi Kata Sandi</string>
+</resources>
